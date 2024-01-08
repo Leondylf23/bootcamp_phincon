@@ -123,15 +123,28 @@ git branch (-m | -M) [<oldbranch>] <newbranch>
 git branch (-c | -C) [<oldbranch>] <newbranch>
 git branch (-d | -D) [-r] <branchname>…​
 git branch --edit-description [<branchname>]
+git bundle create [-q | --quiet | --progress]
+		    [--version=<version>] <file> <git-rev-list-args>
+git bundle verify [-q | --quiet] <file>
+git bundle list-heads <file> [<refname>…​]
+git bundle unbundle [--progress] <file> [<refname>…​]
 git merge
     [branch name]
     [source branch] [target branch]
 git pull
-git checkout
-    - //switch branch to last checked out
-    -- //delete changes to a file
-    -b [branch name] // create new branch and switch to it
-    -b [branch name] origin/[branch name] // create new remote branch and switch to it
+git checkout [-q] [-f] [-m] [<branch>]
+git checkout [-q] [-f] [-m] --detach [<branch>]
+git checkout [-q] [-f] [-m] [--detach] <commit>
+git checkout [-q] [-f] [-m] [[-b|-B|--orphan] <new-branch>] [<start-point>]
+git checkout [-f] <tree-ish> [--] <pathspec>…​
+git checkout [-f] <tree-ish> --pathspec-from-file=<file> [--pathspec-file-nul]
+git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [--] <pathspec>…​
+git checkout [-f|--ours|--theirs|-m|--conflict=<style>] --pathspec-from-file=<file> [--pathspec-file-nul]
+git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]
+git cherry-pick [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>…​
+git cherry-pick (--continue | --skip | --abort | --quit)
+git citool
 git stash //stash changes into dirty working directory
 git stash clear //clear stashed changes
 git status //status
