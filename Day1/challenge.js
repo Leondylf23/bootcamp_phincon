@@ -106,8 +106,8 @@ var input = [
         let value = "";
         value += "Nomor ID: " + element[0] + "\n";
         value += "Nama Lengkap: " + element[1] + "\n";
-        value += "TTL: " + element[2] + "\n";
-        value += "Hobi: " + element[3] + "\n";
+        value += "TTL: " + element[2] + " " + element[3] + "\n";
+        value += "Hobi: " + element[4] + "\n";
         value += "\n\n";
         returnValue += value;
     }
