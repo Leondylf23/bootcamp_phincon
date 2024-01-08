@@ -6,6 +6,9 @@ git init //initialize repository
 git add 
     [file name.ext] // add specific file
     -A // add all new files
+    --no-ignore-removal
+    --no-all
+    --ignore-removal
     -n //dry run
     -v //verbose
     -f //force add file
@@ -16,9 +19,63 @@ git add
     -u
     -no-all
     -N
+    --intent-to-add
     --refresh
+    --ignore-errors
+    --ignore-missing
+    --no-warn-embedded-repo
+    --renormalize
+    --chmod=(+|-)x
+    --pathspec-from-file=<file>
+    --pathspec-file-nul
+    --
 git rm
     -r [file name] //remove file
+git am
+    -s
+    -k
+    --keep-non-patch
+    --[no-]keep-cr
+    -c
+    --no-scissors
+    --quoted-cr=<action>
+    --empty=(stop|drop|keep)
+    -m
+    --message-id
+    --no-message-id
+    -q
+    -u
+    --no-utf8
+    -3
+    --no-3way
+    --rerere-autoupdate
+    --no-rerere-autoupdate
+    --ignore-space-change
+    --ignore-whitespace
+    --whitespace=<action>
+    -C<n>
+    -p<n>
+    --directory=<dir>
+    --exclude=<path>
+    --include=<path>
+    --reject
+    --patch-format
+    -i
+    -n
+    --committer-date-is-author-date
+    --ignore-date
+    --skip
+    -S[<keyid>]
+    --gpg-sign[=<keyid>]
+    --no-gpg-sign
+    --continue
+    -r
+    --resolved
+    --resolvemsg=<msg>
+    --abort
+    --quit
+    --show-current-patch[=(diff|raw)]
+    --allow-empty
 git commit
     -m "[commit message]"
 git branch
