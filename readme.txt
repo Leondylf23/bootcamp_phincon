@@ -1,12 +1,6 @@
 # list commands git
 
-## git config
-<br>
-<br>
-git config <br>
-<code>
-</code>
-git config --global user.name “[firstname lastname]”
+git config --global user.name “[firstname lastname]"
 
 git init [-q | --quiet] [--bare] [--template=<template-directory>]
 	  [--separate-git-dir <git-dir>] [--object-format=<format>]
