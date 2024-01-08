@@ -1,5 +1,7 @@
-//challange 1
+let challange = 1;
 
+console.log(`CHALLANGE ${challange++}`);
+//challange 1
 function bandingkanAngka(angka1, angka2) {
     // you can only write your code here!
     return angka1 == angka2 ? -1 : angka2 > angka1;
@@ -12,6 +14,7 @@ console.log(bandingkanAngka(4, 4)); // -1
 console.log(bandingkanAngka(3, 3)); // -1
 console.log(bandingkanAngka(17, 2)); // false
 
+console.log(`\n\nCHALLANGE ${challange++}`);
 //challange 2
 function balikKata(kata) {
     // you can only write your code here!
@@ -30,12 +33,22 @@ console.log(balikKata('I am a bookworm')); // mrowkoob a ma I
 console.log(balikKata('Coding is my hobby')); // ybboh ym si gnidoC
 console.log(balikKata('Super')); // repuS
 
+console.log(`\n\nCHALLANGE ${challange++}`);
 //challange 3
 function konversiMenit(menit) {
     // you can only write your code here!
     let m = "";
-    m += menit / 60;
-    m = m[0]
+    const min = "" + menit / 60;
+    let val = "";
+    for (let index = 0; index < min.length; index++) {
+        const element = min[index];
+        if(element != ".") {
+            val += element;
+        } else {
+            break;
+        }
+    }
+    m += val;
     m += ":";
     m += (menit % 60) > 9 ? menit % 60 : "0" + (menit % 60);
     return m
@@ -48,6 +61,7 @@ console.log(konversiMenit(53)); // 0:53
 console.log(konversiMenit(88)); // 1:28
 console.log(konversiMenit(120)); // 2:00
 
+console.log(`\n\nCHALLANGE ${challange++}`);
 // challange 4
 function xo(str) {
     // you can only write your code here!
@@ -73,6 +87,7 @@ console.log(xo('oxo')); // false
 console.log(xo('xxxooo')); // true
 console.log(xo('xoxooxxo')); // true
 
+console.log(`\n\nCHALLANGE ${challange++}`);
 // challange 5
 
 var input = [
