@@ -76,14 +76,53 @@ git am
     --quit
     --show-current-patch[=(diff|raw)]
     --allow-empty
+git archive
+    --format=<fmt>
+    -l
+    -v
+    --prefix=<prefix>/
+    -o <file>
+    --add-file=<file>
+    --add-virtual-file=<path>:<content>
+    --worktree-attributes
+    --mtime=<time>
+    <extra [zip | tar]>
+        -<digit> //for zip
+        -<number> //for tar
+    --remote=<repo>
+    --exec=<git-upload-archive>
+    <tree-ish>
+    <path>
+git bisect start [--term-(new|bad)=<term-new> --term-(old|good)=<term-old>]
+	  [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]
+git bisect (bad|new|<term-new>) [<rev>]
+git bisect (good|old|<term-old>) [<rev>...]
+git bisect terms [--term-good | --term-bad]
+git bisect skip [(<rev>|<range>)...]
+git bisect reset [<commit>]
+git bisect (visualize|view)
+git bisect replay <logfile>
+git bisect log
+git bisect run <cmd> [<arg>...]
+git bisect help
 git commit
     -m "[commit message]"
-git branch
-    [branch name] // add new branch
-    -a // list all branch names
-    -d [branch name] // delete branch
-    -D [branch name] // force delete branch
-    -m [old branch name] [new branch name] //rename branch
+git branch [--color[=<when>] | --no-color] [--show-current]
+	[-v [--abbrev=<n> | --no-abbrev]]
+	[--column[=<options>] | --no-column] [--sort=<key>]
+	[--merged [<commit>]] [--no-merged [<commit>]]
+	[--contains [<commit>]] [--no-contains [<commit>]]
+	[--points-at <object>] [--format=<format>]
+	[(-r | --remotes) | (-a | --all)]
+	[--list] [<pattern>…​]
+git branch [--track[=(direct|inherit)] | --no-track] [-f]
+	[--recurse-submodules] <branchname> [<start-point>]
+git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
+git branch --unset-upstream [<branchname>]
+git branch (-m | -M) [<oldbranch>] <newbranch>
+git branch (-c | -C) [<oldbranch>] <newbranch>
+git branch (-d | -D) [-r] <branchname>…​
+git branch --edit-description [<branchname>]
 git merge
     [branch name]
     [source branch] [target branch]
