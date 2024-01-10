@@ -1,0 +1,195 @@
+@media only screen and (max-width: 840px) {
+    .nav-links {
+        display: none !important;
+    }
+    .nav-menu {
+        display: block !important;
+        margin-right: 20px;
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    nav > div {
+        width: 95% !important;
+    }
+    .content-6-email {
+        flex-direction: column;
+    }
+    .content-6-email > div {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .table-spec {
+        display: none !important;
+    }
+    .nav-user {
+        display: none !important;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    button {
+        height: 50px;
+        width: 200px;
+    }
+    .content-2-div {
+        flex-direction: column;
+    }
+    .content-2-div-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .content-2-div-right {
+        width: 100%;
+    }
+    .radio {
+        width: 10px;
+        height: 10px;
+    }
+    .content-2-arrow-left {
+        top: 40%;
+    }
+    .content-2-arrow-right {
+        top: 40%;
+    }
+    .content-3 > div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-color: rgba(0,0,0,0.80);
+        padding: 15px 5px 5px 15px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+    }
+    .table-spec-mobile {
+        width: 300px;
+        margin-top: 30px;
+        position: relative;
+    }
+    .table-spec-mobile > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-4 > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .img-content-5 {
+        width: 200px !important;
+    }
+    .img-indent-right {
+        margin-right: 0;
+    }
+    .img-indent-left {
+        margin-left: 0;
+    }
+    .content-5 > div {
+        width: 80%;
+    }
+    .content-5-right {
+        gap: 5px !important;
+        margin-left: -50px;
+        margin-top: -60px;
+        opacity: 60%;
+    }
+    .content-5-left {
+        z-index: 5;
+        margin-top: 30px;
+    }
+    .mobile-gap {
+        margin-top: 50px;
+    }
+    .content-6 {
+        height: calc(100vh + 100px);
+        align-items: start !important;
+        background-image: url("./imgs/content-6-img.png");
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .content-6 > div {
+        margin-top: 100px;
+    }
+    .content-6-left {
+        display: none;
+    }
+    .content-6-right {
+        width: 100%;
+        padding-left: 0;
+    }
+    .content-6-footer {
+        margin-bottom: 10px;
+    }
+    .content-6-footer > div {
+        font-size: 12px;
+    }
+    .content-6-paragraph {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .footer-links {
+        display: none !important;
+    }
+    .footer-links-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 25px;
+    }
+    .footer-links-mobile > div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-links-mobile > div > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 50%;
+    }
+    .footer-links-mobile > div > div > a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .footer-links-icons {
+        gap: 35px;
+    }
+    .copyright {
+        width: 50%;
+        font-size: 7px;
+    }
+    .footer-bottom-links {
+        width: 50%;
+        font-size: 7px;
+    }
+}
+@media only screen and (min-width: 840px) {
+    .menus {
+        display: none !important;
+    }
+    .table-spec-mobile {
+        display: none !important;
+    }
+    .footer-links-mobile {
+        display: none !important;
+    }
+}
