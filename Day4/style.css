@@ -80,6 +80,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .greetings-container > h1 {
     font-size: 26px;
+    margin-bottom: 10px;
 }
 .greetings-container > h3 {
     font-size: 12px;
@@ -123,7 +124,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     width: 100%;
     color: #3E334E;
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -245,6 +246,11 @@ h1, h2, h3, h4, h5, h6, p, a {
 .hidden {
     display: none;
 }
+.inputs-container > h2 {
+    display: none;
+    text-align: start;
+    width: 100%;
+}
 @media only screen and (max-width: 1067px) {
     .left-content > div {
         width: 70%;
@@ -321,5 +327,8 @@ h1, h2, h3, h4, h5, h6, p, a {
     .logo-container > img {
         width: 52px;
         height: 52px;
+    }
+    .inputs-container > h2 {
+        display: block;
     }
 }
