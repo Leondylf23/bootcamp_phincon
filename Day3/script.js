@@ -16,6 +16,7 @@ function toggleMenu(){
     }
 }
 
+
 const carouselImgs = ["./imgs/content-2-img.jpg", "./imgs/bg1.png", "./imgs/bg2.png", "./imgs/bg3.png", "./imgs/bg4.png"];
 var carouselIndex = 0;
 function carouselLeft() {
