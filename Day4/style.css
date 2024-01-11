@@ -131,8 +131,36 @@ h1, h2, h3, h4, h5, h6, p {
 .input-checkbox {
     width: 16px;
     height: 16px;
-    background: linear-gradient(90deg, rgba(160,60,234,1) 0%, rgba(251,101,100,1) 100%);
     margin-right: 4px;
+    border-radius: 4px;
+    border: 1px solid #464646;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    position: relative;
+}
+.input-checkbox:checked {
+    background: linear-gradient(90deg, rgba(160,60,234,1) 0%, rgba(251,101,100,1) 100%);
+}
+.input-checkbox::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("./imgs/check-solid.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+}
+.input-checkbox:checked::before{
+    display: block;
 }
 .input-container-bottom {
     display: flex;
