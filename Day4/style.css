@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6, p {
 .input-checkbox {
     width: 16px;
     height: 16px;
-    margin-right: 4px;
+    margin-right: 8px;
     border-radius: 4px;
     border: 1px solid #464646;
     appearance: none;
@@ -277,6 +277,7 @@ h1, h2, h3, h4, h5, h6, p {
         width: 20px;
         height: 20px;
         cursor: pointer;
+        margin-right: 4px;
     }
     .input-container-bottom > label, a {
         font-size: 16px;
