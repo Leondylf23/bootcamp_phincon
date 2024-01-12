@@ -213,12 +213,18 @@ h1, h2, h3, h4, h5, h6, a, p {
 .app-keypad > button:active {
     background-color: var(--btn-1-clicked);
 }
+.app-keypad-active {
+    background-color: var(--btn-1-clicked) !important;
+}
 .text-equal {
     color: var(--text-equal-button) !important;
     background-color: var(--btn-3) !important;
     border-bottom: 2px solid var(--btn-3-shadow) !important;
 }
 .text-equal:active {
+    background-color: var(--btn-3-clicked) !important;
+}
+.text-equal-active {
     background-color: var(--btn-3-clicked) !important;
 }
 .text-2-btns {
@@ -228,6 +234,9 @@ h1, h2, h3, h4, h5, h6, a, p {
     font-weight: 600 !important;
 }
 .text-2-btns:active {
+    background-color: var(--btn-2-clicked) !important;
+}
+.text-2-btns-active {
     background-color: var(--btn-2-clicked) !important;
 }
 .btn-grid-2-cols {

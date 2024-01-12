@@ -112,7 +112,6 @@ function buttonClick(data) {
     displayView.innerHTML = numberWithPeriods(display);
     operatorDisplay.innerHTML = `${lastOperator != "" ? numberWithPeriods(tempNumber) : ""} ${lastOperator}`;
 }
-
 addEventListener("keydown", (e) => {
     const key = e.key;
     const registeredKeys = "1234567890-+*/=x.";
@@ -120,24 +119,82 @@ addEventListener("keydown", (e) => {
     
     if(registeredKeys.includes(key) || registeredSpecialKeys.includes(key)) {
         switch (key) {
-            case "Delete":
-                buttonClick("del");
+            case "Delete": {
+                const btn = document.getElementById("del");
+                btn.setAttribute("class", "text-2-btns text-2-btns-active");
+                btn.click();
                 break;
-            case "Backspace":
-                buttonClick("del");
+            }
+            case "Backspace": {
+                const btn = document.getElementById("del");
+                btn.setAttribute("class", "text-2-btns text-2-btns-active");
+                btn.click();
                 break;
-            case "Enter":
-                buttonClick("=");
+            }
+            case "Enter": {
+                const btn = document.getElementById("=");
+                btn.setAttribute("class", "btn-grid-2-cols text-equal text-equal-active");
+                btn.click();
                 break;
-            case "Escape":
-                buttonClick("res");
+            }
+            case "Escape": {
+                const btn = document.getElementById("res");
+                btn.setAttribute("class", "text-2-btns btn-grid-2-cols text-2-btns-active");
+                btn.click();
                 break;
-            case "*":
-                buttonClick("x");
+            }
+            case "*": {
+                const btn = document.getElementById("x");
+                btn.setAttribute("class", "app-keypad-active");
+                btn.click();
                 break;
-            default:
-                buttonClick(key);
+            }
+            default: {
+                const btn = document.getElementById(key);
+                btn.setAttribute("class", "app-keypad-active");
+                btn.click();
                 break;
+            }
+        }
+    }
+});
+addEventListener("keyup", (e) => {
+    const key = e.key;
+    const registeredKeys = "1234567890-+*/=x.";
+    const registeredSpecialKeys = ["Delete", "Backspace", "Enter", "Escape"];
+    
+    if(registeredKeys.includes(key) || registeredSpecialKeys.includes(key)) {
+        switch (key) {
+            case "Delete": {
+                const btn = document.getElementById("del");
+                btn.setAttribute("class", "text-2-btns");
+                break;
+            }
+            case "Backspace": {
+                const btn = document.getElementById("del");
+                btn.setAttribute("class", "text-2-btns");
+                break;
+            }
+            case "Enter": {
+                const btn = document.getElementById("=");
+                btn.setAttribute("class", "btn-grid-2-cols text-equal");
+                break;
+            }
+            case "Escape": {
+                const btn = document.getElementById("res");
+                btn.setAttribute("class", "text-2-btns btn-grid-2-cols");
+                break;
+            }
+            case "*": {
+                const btn = document.getElementById("x");
+                btn.removeAttribute("class");
+                break;
+            }
+            default: {
+                const btn = document.getElementById(key);
+                btn.removeAttribute("class");
+                break;
+            }
         }
     }
 });
