@@ -68,6 +68,7 @@ function buttonClick(data) {
     } else if(data === "=") {
         if(!isClear) {
             result();
+            isClear = true;
         }
     } else if(data === "res") {
         lastOperator = "";
@@ -76,14 +77,12 @@ function buttonClick(data) {
     } else if(operators.includes(data)) {
         if(tempNumber != 0) result();
         tempNumber = parseFloat(display);
-        // isClear = true;
         lastOperator = data;
         display = "0";
-        // isClear = false;
     } else {
-        if(display === "0") {
+        if(display === "0" || isClear) {
             display = "";
-            // isClear = false;
+            isClear = false;
         }
         display += data;
     }
