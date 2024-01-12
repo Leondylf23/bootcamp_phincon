@@ -113,6 +113,31 @@ function buttonClick(data) {
     operatorDisplay.innerHTML = `${lastOperator != "" ? numberWithPeriods(tempNumber) : ""} ${lastOperator}`;
 }
 
-function result() {
-
-}
+addEventListener("keydown", (e) => {
+    const key = e.key;
+    const registeredKeys = "1234567890-+*/=x.";
+    const registeredSpecialKeys = ["Delete", "Backspace", "Enter", "Escape"];
+    
+    if(registeredKeys.includes(key) || registeredSpecialKeys.includes(key)) {
+        switch (key) {
+            case "Delete":
+                buttonClick("del");
+                break;
+            case "Backspace":
+                buttonClick("del");
+                break;
+            case "Enter":
+                buttonClick("=");
+                break;
+            case "Escape":
+                buttonClick("res");
+                break;
+            case "*":
+                buttonClick("x");
+                break;
+            default:
+                buttonClick(key);
+                break;
+        }
+    }
+});
