@@ -5,8 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Calculator App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="theme-color-1">
+    <div class="app">
+        <div class="app-heading">
+            <h1>calc</h1>
+            <div>
+                <h4>THEME</h4>
+            </div>
+            <div class="switch-theme-container">
+                <div class="switch-indicator">
+                    <h4>1</h4>
+                    <h4>2</h4>
+                    <h4>3</h4>
+                </div>
+                <div class="switch-base" id="switchTheme">
+                    <div class="switch-btn active" onclick="changeTheme(0)"></div>
+                    <div class="switch-btn" onclick="changeTheme(1)"></div>
+                    <div class="switch-btn" onclick="changeTheme(2)"></div>
+                </div>
+            </div>
+        </div>
+        <div class="app-screen">
+            <div>
+                <h1 id="display">0</h1>
+            </div>
+            <h2 class="operator-display" id="operatorDisplay"></h2>
+        </div>
+        <div class="app-keypad">
+            <button onclick="buttonClick('7')"><a>7</a></button>
+            <button onclick="buttonClick('8')"><a>8</a></button>
+            <button onclick="buttonClick('9')"><a>9</a></button>
+            <button onclick="buttonClick('del')" class="text-2-btns"><a>DEL</a></button>
+            <button onclick="buttonClick('4')"><a>4</a></button>
+            <button onclick="buttonClick('5')"><a>5</a></button>
+            <button onclick="buttonClick('6')"><a>6</a></button>
+            <button onclick="buttonClick('+')"><a>+</a></button>
+            <button onclick="buttonClick('1')"><a>1</a></button>
+            <button onclick="buttonClick('2')"><a>2</a></button>
+            <button onclick="buttonClick('3')"><a>3</a></button>
+            <button onclick="buttonClick('-')"><a>-</a></button>
+            <button onclick="buttonClick('.')"><a>.</a></button>
+            <button onclick="buttonClick('0')"><a>0</a></button>
+            <button onclick="buttonClick('/')"><a>/</a></button>
+            <button onclick="buttonClick('x')"><a>X</a></button>
+            <button onclick="buttonClick('res')" class="text-2-btns btn-grid-2-cols"><a>RESET</a></button>
+            <button onclick="buttonClick('=')" class="btn-grid-2-cols text-equal"><a>=</a></button>
+        </div>
+    </div>
 </body>
+<script src="./script.js"></script>
 </html>

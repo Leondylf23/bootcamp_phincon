@@ -1,4 +1,266 @@
+.theme-color-1 {
+    --page-color: #3b4664;
+    --switch-btn: #f7685b;
+    --switch-base: #252d44;
+    --screen-base: #181f32;
+    --keypad-base: #252d44;
+    --btn-1: #eae3db;
+    --btn-1-clicked: #fff;
+    --btn-1-shadow: #b1a4a0;
+    --btn-2: #a2b3e1;
+    --btn-2-clicked: #c6cee4;
+    --btn-2-shadow: #a2b3e1;
+    --btn-3: #f96c5b;
+    --btn-3-clicked: #e69e96;
+    --btn-3-shadow: #932316;
+    --text-primary: #fffffe;
+    --text-secondary: #3d414b;
+    --text-equal-button: #fffffe;
+    --text-2-btns: #f5ffff;
+}
+.theme-color-2 {
+    --page-color: #e6e6e6;
+    --switch-btn: #fd8b34;
+    --switch-base: #d4cdcd;
+    --screen-base: #eeeeee;
+    --keypad-base: #d3cdcd;
+    --btn-1: #e5e4e0;
+    --btn-1-clicked: #ffffff;
+    --btn-1-shadow: #a59e92;
+    --btn-2: #61b5bd;
+    --btn-2-clicked: #95d1d6;
+    --btn-2-shadow: #38666c;
+    --btn-3: #ff8b38;
+    --btn-3-clicked: #f1aa78;
+    --btn-3-shadow: #893700;
+    --text-primary: #34332d;
+    --text-secondary: #34332d;
+    --text-equal-button: #f5ffff;
+    --text-2-btns: #f5ffff;
+}
+.theme-color-3 {
+    --page-color: #17062a;
+    --switch-btn: #97fefa;
+    --switch-base: #1e0836;
+    --screen-base: #1e0836;
+    --keypad-base: #1e0836;
+    --btn-1: #331b4d;
+    --btn-1-clicked: #563e6e;
+    --btn-1-shadow: #7d2494;
+    --btn-2: #8631b0;
+    --btn-2-clicked: #ad55da;
+    --btn-2-shadow: #b919ee;
+    --btn-3: #94fff9;
+    --btn-3-clicked: #c6f3f1;
+    --btn-3-shadow: #70f9f0;
+    --text-primary: #f6e12a;
+    --text-secondary: #f6e12a;
+    --text-equal-button: #34332d;
+    --text-2-btns: #f5ffff;
+}
 body {
     width: 100vw;
     height: 100dvh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--page-color);
+}
+h1, h2, h3, h4, h5, h6, a, p {
+    margin: 0;
+}
+.app {
+    width: 400px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+.app-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+.app-heading > h1 {
+    font-size: 20px;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+.app-heading > div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-left: 20px;
+    align-items: end;
+}
+.app-heading > div > h4 {
+    font-size: 12px;
+    color: var(--text-primary);
+    margin-top: 20px;
+}
+.switch-theme-container {
+    display: flex;
+    flex-direction: column;
+    width: 15% !important;
+}
+.switch-indicator {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.switch-indicator > h4 {
+    font-size: 12px;
+    color: var(--text-primary);
+}
+.switch-base {
+    width: 100%;
+    background-color: var(--switch-base);
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.switch-btn {
+    opacity: 0%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--switch-btn);
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+    cursor: pointer;
+}
+.active {
+    opacity: 100% !important;
+}
+.app-screen {
+    width: 100%;
+    height: 100px;
+    background-color: var(--screen-base);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+.operator-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+.app-screen > div {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    overflow-x: auto;
+    color: var(--text-primary);
+    font-size: 26px;
+    font-weight: 900;
+    margin-top: 5px;
+}
+.app-keypad {
+    width: 100%;
+    background-color: var(--keypad-base);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.app-keypad > button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-1);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--text-secondary);
+    border: 0;
+    border-bottom: 2px solid var(--btn-1-shadow);
+    cursor: pointer;
+}
+.app-keypad > button:active {
+    background-color: var(--btn-1-clicked);
+}
+.text-equal {
+    color: var(--text-equal-button) !important;
+    background-color: var(--btn-3) !important;
+    border-bottom: 2px solid var(--btn-3-shadow) !important;
+}
+.text-equal:active {
+    background-color: var(--btn-3-clicked) !important;
+}
+.text-2-btns {
+    color: var(--text-2-btns) !important;
+    background-color: var(--btn-2) !important;
+    border-bottom: 2px solid var(--btn-2-shadow) !important;
+    font-weight: 600 !important;
+}
+.text-2-btns:active {
+    background-color: var(--btn-2-clicked) !important;
+}
+.btn-grid-2-cols {
+    grid-column: span 2 / span 2;
+}
+@media (max-width: 420px) {
+    .app {
+        width: 260px;
+    }
+    .switch-theme-container {
+        width: 40% !important;
+    }
+    .switch-indicator > h4 {
+        font-size: 10px;
+    }
+    .app-screen {
+        height: 70px;
+    }
+    .app-keypad {
+        padding: 12px;
+        gap: 12px;
+    }
+    .app-keypad > button {
+        font-size: 16px;
+    }
+    .switch-btn {
+        width: 16px;
+        height: 16px;
+    }
+    .app-screen > div {
+        font-size: 16px;
+    }
+    .operator-display {
+        font-size: 10px;
+    }
 }
