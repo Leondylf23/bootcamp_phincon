@@ -173,9 +173,12 @@ h1, h2, h3, h4, h5, h6, a, p {
     justify-content: end;
     overflow-x: auto;
     color: var(--text-primary);
-    font-size: 26px;
-    font-weight: 900;
     margin-top: 5px;
+}
+.app-screen > div > h1 {
+    max-width: 100%;
+    font-size: 40px;
+    font-weight: 900;
 }
 .app-keypad {
     width: 100%;
@@ -266,10 +269,24 @@ h1, h2, h3, h4, h5, h6, a, p {
         width: 16px;
         height: 16px;
     }
-    .app-screen > div {
-        font-size: 16px;
+    .app-screen > div > h1 {
+        font-size: 26px;
     }
     .operator-display {
         font-size: 10px;
     }
+}
+
+
+::-webkit-scrollbar {
+    height: 2px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--btn-3);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--btn-3-clicked);
 }

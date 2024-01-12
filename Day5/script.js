@@ -131,6 +131,12 @@ addEventListener("keydown", (e) => {
                 btn.click();
                 break;
             }
+            case "=": {
+                const btn = document.getElementById("=");
+                btn.setAttribute("class", "btn-grid-2-cols text-equal text-equal-active");
+                btn.click();
+                break;
+            }
             case "Enter": {
                 const btn = document.getElementById("=");
                 btn.setAttribute("class", "btn-grid-2-cols text-equal text-equal-active");
@@ -180,6 +186,11 @@ addEventListener("keyup", (e) => {
                 btn.setAttribute("class", "btn-grid-2-cols text-equal");
                 break;
             }
+            case "=": {
+                const btn = document.getElementById("=");
+                btn.setAttribute("class", "btn-grid-2-cols text-equal");
+                break;
+            }
             case "Escape": {
                 const btn = document.getElementById("res");
                 btn.setAttribute("class", "text-2-btns btn-grid-2-cols");
@@ -192,6 +203,7 @@ addEventListener("keyup", (e) => {
             }
             default: {
                 const btn = document.getElementById(key);
+                
                 btn.removeAttribute("class");
                 break;
             }
