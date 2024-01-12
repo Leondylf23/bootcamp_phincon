@@ -1,10 +1,17 @@
+let theme = parseInt(localStorage.getItem('theme'));
+if(theme) {
+    changeTheme(theme);
+}
+if(isNaN(theme) || theme > 2) {
+    localStorage.removeItem('theme');
+}
+
 function changeTheme(i) {
     const switchTheme = document.getElementById("switchTheme").children;
     
     for (let index = 0; index < switchTheme.length; index++) {
         const element = switchTheme[index];
         element.setAttribute("class", "switch-btn");
-
     }
 
     switch(i) {
@@ -23,11 +30,23 @@ function changeTheme(i) {
     }
 
     switchTheme[i].setAttribute("class", "switch-btn active");
+    localStorage.setItem("theme", i);
 }
+
 var display = "0";
 var lastOperator = "";
 var isClear = false;
 var tempNumber = 0;
+
+function numberWithPeriods(value) {
+    if (!value) return "0";
+    value = value.toString();
+    let valueSplit = value.split(".");
+    let frontValue = valueSplit[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    let behindValue = valueSplit.length > 1 ? "." + valueSplit[1] : "";
+    
+    return frontValue + behindValue;
+}
 
 function buttonClick(data) {
     const displayView = document.getElementById("display");
@@ -56,8 +75,12 @@ function buttonClick(data) {
     }
 
     if(data === "del") {
-        display = display.slice(0, display.length - 1);
-        if(!display.length > 0) display = "0";
+        if(isClear) {
+            display = "0";
+        } else {
+            display = display.slice(0, display.length - 1);
+            if(!display.length > 0) display = "0";
+        }
     } else if(data === ".") {
         if(display.includes(".")) return;
         if(isClear) {
@@ -86,8 +109,8 @@ function buttonClick(data) {
         }
         display += data;
     }
-    displayView.innerHTML = display;
-    operatorDisplay.innerHTML = `${lastOperator != "" ? tempNumber : ""} ${lastOperator}`;
+    displayView.innerHTML = numberWithPeriods(display);
+    operatorDisplay.innerHTML = `${lastOperator != "" ? numberWithPeriods(tempNumber) : ""} ${lastOperator}`;
 }
 
 function result() {
